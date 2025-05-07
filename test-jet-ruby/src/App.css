@@ -36,3 +36,43 @@
     transform: rotate(360deg);
   }
 }
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+h1 {
+  text-align: center;
+}
+.search-box {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+input, button {
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+table, th, td {
+  border: 1px solid #ddd;
+}
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background-color: #f4f4f4;
+}
+.error {
+  color: red;
+  text-align: center;
+}
