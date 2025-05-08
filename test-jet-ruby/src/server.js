@@ -22,7 +22,7 @@ app.get(`/repositories/:ReposIdOrLanguage`, async (req, res) => {
     let result;
     try {
         if (!isNaN(ReposIdOrLanguage)) {
-            result = await pool.query(`SELECT * FROM repositories WHERE id=$1`, [ReposIdOrLanguage]);
+            result = await pool.query(`SELECT * FROM repositories WHERE CAST(id AS TEXT) LIKE $1 || '%'`, [ReposIdOrLanguage]);
         } else {
             result = await pool.query(
                 `SELECT * FROM repositories WHERE LOWER(name) LIKE LOWER($1) OR LOWER(language) LIKE LOWER($1)`,
